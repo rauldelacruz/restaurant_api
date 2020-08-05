@@ -10,6 +10,10 @@ db = SQLAlchemy(app)
 
 from models import Restaurant
 
+@app.route("/")
+def hello():
+    return "MELP"
+
 @app.route("/restaurants", methods=['POST'])
 def create_restaurant():
     req = request.get_json()
